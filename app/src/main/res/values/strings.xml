@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">StatusBarUtils</string>
+
+    <string name="text_device_info">手机厂商: %s\n手机型号: %s\nAndroid: %s\n</string>
+    <string name="text_color">颜色状态栏演示</string>
+    <string name="text_change_color">更换颜色</string>
+    <string name="text_translucent">透明状态栏演示</string>
+    <string name="text_change_background">更换背景</string>
+    <string name="text_gradient">渐变状态栏演示</string>
+    <string name="text_change_gradient">更换渐变颜色</string>
+    <string name="text_fragment">Fragment演示</string>
+    <string name="text_light_mode">Light Mode(Android6.0及以上有效)</string>
+    <string name="text_dark_mode">Dark Mode(Android6.0及以上有效)</string>
+</resources>
