@@ -1,5 +1,8 @@
 package ysn.com.statusbarutils.utils;
 
+import android.content.Context;
+import android.content.res.Resources;
+
 /**
  * @Author yangsanning
  * @ClassName DeviceUtils
@@ -28,5 +31,15 @@ public class DeviceUtils {
      */
     public static String getDeviceBrand() {
         return android.os.Build.BRAND;
+    }
+
+    /**
+     * 获取虚拟键盘高度
+     */
+    public static int getNavigationBarHeight(Context activity) {
+        Resources resources = activity.getResources();
+        int resourceId = resources.getIdentifier("navigation_bar_height",
+            "dimen", "android");
+        return resources.getDimensionPixelSize(resourceId);
     }
 }

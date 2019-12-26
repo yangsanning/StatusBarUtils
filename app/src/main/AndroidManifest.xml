@@ -22,5 +22,8 @@
         <activity android:name=".page.TransparentActivity"/>
         <activity android:name=".page.ColorActivity"/>
         <activity android:name=".page.GradientActivity"/>
+        <activity
+            android:name=".page.ShowHideStatusBarActivity"
+            android:theme="@style/ShowHideStatusBarActivityTheme" />
     </application>
 </manifest>

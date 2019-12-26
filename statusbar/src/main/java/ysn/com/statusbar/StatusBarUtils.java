@@ -119,6 +119,30 @@ public class StatusBarUtils {
         darkMode(activity.getWindow(), false);
     }
 
+
+    /**
+     * 获取状态栏高度
+     */
+    public static int getStatusBarHeight(Context context) {
+        int resourceId = context.getResources().getIdentifier("status_bar_height", "dimen", "android");
+        return context.getResources().getDimensionPixelSize(resourceId);
+    }
+
+    /**
+     * 显示状态栏
+     */
+    public static void showStatusBar(Activity activity) {
+        activity.getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN);
+    }
+
+    /**
+     * 隐藏状态栏
+     */
+    public static void hideStatusBar(Activity activity) {
+        activity.getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+            | View.SYSTEM_UI_FLAG_FULLSCREEN);
+    }
+
     @TargetApi(Build.VERSION_CODES.M)
     private static void darkMode(Window window, boolean dark) {
         if (isFlyme4()) {
@@ -265,13 +289,5 @@ public class StatusBarUtils {
                 ((ViewGroup) childView).setClipToPadding(fitSystemWindows);
             }
         }
-    }
-
-    /**
-     * 获取状态栏高度
-     */
-    private static int getStatusBarHeight(Context context) {
-        int resourceId = context.getResources().getIdentifier("status_bar_height", "dimen", "android");
-        return context.getResources().getDimensionPixelSize(resourceId);
     }
 }

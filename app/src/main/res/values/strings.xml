@@ -11,4 +11,7 @@
     <string name="text_fragment">Fragment演示</string>
     <string name="text_light_mode">Light Mode(Android6.0及以上有效)</string>
     <string name="text_dark_mode">Dark Mode(Android6.0及以上有效)</string>
+    <string name="text_show_hide_status_bar">显示隐藏状态栏</string>
+    <string name="text_show_status_bar">显示状态栏</string>
+    <string name="text_hide_status_bar">隐藏状态栏</string>
 </resources>

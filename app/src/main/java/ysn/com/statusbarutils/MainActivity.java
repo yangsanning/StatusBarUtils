@@ -12,6 +12,7 @@ import ysn.com.statusbar.StatusBarUtils;
 import ysn.com.statusbarutils.page.ColorActivity;
 import ysn.com.statusbarutils.page.FragmentIndexActivity;
 import ysn.com.statusbarutils.page.GradientActivity;
+import ysn.com.statusbarutils.page.ShowHideStatusBarActivity;
 import ysn.com.statusbarutils.page.TransparentActivity;
 import ysn.com.statusbarutils.utils.DeviceUtils;
 import ysn.com.statusbarutils.utils.ResUtils;
@@ -30,18 +31,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         TextView deviceInfoTextView = findViewById(R.id.main_activity_device_info);
         deviceInfoTextView.setText(ResUtils.getStringFormat(R.string.text_device_info,
-                DeviceUtils.getDeviceBrand(),
-                DeviceUtils.getSystemModel(),
-                DeviceUtils.getSystemVersion()
+            DeviceUtils.getDeviceBrand(),
+            DeviceUtils.getSystemModel(),
+            DeviceUtils.getSystemVersion()
         ));
 
         setOnClickListener(R.id.main_activity_skip_color,
-                R.id.main_activity_skip_transparent,
-                R.id.main_activity_skip_gradient,
-                R.id.main_activity_skip_fragment,
-                R.id.main_activity_light_mode,
-                R.id.main_activity_dark_mode,
-                R.id.main_activity_skip_color);
+            R.id.main_activity_skip_transparent,
+            R.id.main_activity_skip_gradient,
+            R.id.main_activity_skip_fragment,
+            R.id.main_activity_light_mode,
+            R.id.main_activity_dark_mode,
+            R.id.main_activity_skip_color,
+            R.id.main_activity_show_hide_status_bar);
     }
 
     private void setOnClickListener(@IdRes int... idResArray) {
@@ -72,6 +74,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.main_activity_dark_mode:
                 StatusBarUtils.setColor(this, ResUtils.getColor(R.color.color_black1), toolbar);
                 StatusBarUtils.setDarkMode(MainActivity.this);
+                break;
+            case R.id.main_activity_show_hide_status_bar:
+                startActivity(ShowHideStatusBarActivity.class);
                 break;
             default:
                 break;
